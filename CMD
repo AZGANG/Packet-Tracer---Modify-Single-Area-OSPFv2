@@ -1,0 +1,48 @@
+R1-----------------------------------------------------------------
+en
+config t
+ 
+#Step 1: Test connectivity between all end devices.
+Before modifying the OSPF settings, verify that all PCs can ping the web server and each other
+
+ping 64.100.1.2 
+
+int s0/0/0
+
+# The dead interval is 4 times the hello interval 
+ip ospf hello-interval 15 
+ip ospf dead-interval 60 
+
+# Do tracert on PC1 to webserver 
+tracert 64.100.1.2 
+
+#Adjust the bandwidth setting on R1
+#This does not change the actual port speed, only the metric that the OSPF process on R1 will use to calculate best routes.
+
+int s0/0/0 
+bandwidth 64 
+
+R2-----------------------------------------------------------------
+en 
+config t
+
+#Step 1: Test connectivity between all end devices.
+Before modifying the OSPF settings, verify that all PCs can ping the web server and each other
+
+ping 64.100.1.2 
+
+int s0/0/0
+ip ospf hello-interval 15 
+ip ospf dead-interval 60 
+
+int s0/0/0
+bandwidth 64
+
+R3-----------------------------------------------------------------
+en 
+config t
+
+#Step 1: Test connectivity between all end devices.
+Before modifying the OSPF settings, verify that all PCs can ping the web server and each other
+
+ping 64.100.1.2 
