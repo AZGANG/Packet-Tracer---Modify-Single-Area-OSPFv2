@@ -5,7 +5,7 @@ Part 1: Modify OSPF Default Settings
 Part 2: Verify Connectivity
 
 
-On cisco routers you can change the cost of an ospf path by chaning the bandwidth. But you can also use another command that does almost the same thing. But you are just manualy setting the cost, inssted on making the devices run spf algorithm, you can set the cost. for example you can use this command.
+On cisco routers you can change the cost of an ospf path by chaning the bandwidth. But you can also use another command that does almost the same thing. But you are just manually setting the cost, inssted on making the devices run spf algorithm, you can set the cost. for example you can use this command.
 int g0/0 
 ip ospf cost 200 
 
