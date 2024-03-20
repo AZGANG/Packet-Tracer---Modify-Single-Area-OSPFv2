@@ -5,6 +5,13 @@ Part 1: Modify OSPF Default Settings
 Part 2: Verify Connectivity
 
 
+On cisco routers you can change the cost of an ospf path by chaning the bandwidth. But you can also use another command that does almost the same thing. But you are just manualy setting the cost, inssted on making the devices run spf algorithm, you can set the cost. for example you can use this command.
+int g0/0 
+ip ospf cost 200 
+
+just take note that the commands do the same thing but in a different way. One adjusts the bandwidth and the other changes the cost manually.
+
+![image](https://github.com/AZGANG/Packet-Tracer---Modify-Single-Area-OSPFv2/assets/128199477/92abc483-6724-4a61-ada1-479107be6056)
 ![Screenshot (146)](https://github.com/AZGANG/Packet-Tracer---Modify-Single-Area-OSPFv2/assets/128199477/ee73b359-4795-4816-af72-d6bf199e7dcc)
 ![Screenshot (145)](https://github.com/AZGANG/Packet-Tracer---Modify-Single-Area-OSPFv2/assets/128199477/e1a6a766-7b36-47f8-a007-bad8c843576c)
 ![Screenshot (144)](https://github.com/AZGANG/Packet-Tracer---Modify-Single-Area-OSPFv2/assets/128199477/0271a184-d2ed-4044-a1ec-58ed7c0e93c0)
